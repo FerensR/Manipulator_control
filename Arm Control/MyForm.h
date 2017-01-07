@@ -379,6 +379,7 @@ namespace ArmControl {
 			this->ïğîÏğîãğàìóToolStripMenuItem->Name = L"ïğîÏğîãğàìóToolStripMenuItem";
 			this->ïğîÏğîãğàìóToolStripMenuItem->Size = System::Drawing::Size(99, 20);
 			this->ïğîÏğîãğàìóToolStripMenuItem->Text = L"Ïğî ïğîãğàìó";
+			this->ïğîÏğîãğàìóToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ïğîÏğîãğàìóToolStripMenuItem_Click);
 			// 
 			// button1
 			// 
@@ -494,7 +495,15 @@ namespace ArmControl {
 				 _serialPort->Open();
 				 _serialPort->WriteLine("zero");
 				 _serialPort->Close();
+				 trackBar1->Value = 0;
+				 trackBar2->Value = 90;
+				 trackBar3->Value = 90;
+				 trackBar4->Value = 90;
+				 trackBar5->Value = 90;
+				 trackBar6->Value = 90;
 
+}
+private: System::Void ïğîÏğîãğàìóToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }
